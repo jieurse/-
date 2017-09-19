@@ -1,4 +1,4 @@
-﻿@import url('base.css');
+@import url('base.css');
 /* 把一个css文件引入到另一个css文件中 */
 header{
 	width:100%;
@@ -181,32 +181,38 @@ nav{
 .ss-right:hover{
 	background: #FF6700;
 }
+/* banner开始 */
 .banner{
 	width: 1226px;
 	height: 460px;
-	background:green;
+	/* background:green; */
 	margin: 0 auto;
 	position: relative;
 }
-.banner-img{
+.bannerimg{
 	width: 1226px;
 	height: 460px;
-	background: red;
+	/* background: red; */
 	position: relative;
 }
-.banner-img a{
-	width: 1226px;
+.bannerimg li{
+	width: 100%;
 	height: 460px;
 	float: left;
-	background: yellowgreen;
+	/* background: yellowgreen; */
 	position: absolute;
 	top: 0;
 	left: 0;
+	display: none;
 }
-.banner-img a img{
-	width: 1226px;
+.bannerimg li:first-child{
+	display: block;
+}
+.bannerimg img{
+	width: 100%;
 	height: 460px;
 }
+
 aside{
 	width: 233px;
 	height: 460px;
@@ -216,30 +222,41 @@ aside{
 	top: 0;
 	left: 0;
 }
-.aside-box{
+.aside{
 	width: 233px;
 	height: 390px;
 	margin-top: 35px;
+	position: relative;
 }
-.aside-box li{
+.aside li{
 	width: 203px;
 	height: 12px;
-	font-size: 12px;
+	font-size: 14px;
 	padding-top: 13.5px;
 	padding-bottom: 13.5px;
 	padding-left: 30px;
 	float: left;
 }
-.aside-box li a{
+.aside li a{
 	color: #fff;
 }
-.aside-box li:hover{
+.aside li:hover{
 	background: #ffba3b;
 }
-.aside-box div{
+.aside div{
 	margin-right: 23px;
 	float: right;
 	color: #fff;
+}
+.aside .item{
+    height: 460px;
+    width: 700px;
+    background: red;
+    position: absolute;
+    top: -35px;
+    left: 235px;
+    display: none;
+    z-index: 10;
 }
 .banner-right,.banner-left{
 	width: 41px;
@@ -251,6 +268,7 @@ aside{
     margin-top: auto;
     margin-bottom: auto;
 }
+/* 图片精灵 */
 .banner-left{
 	background: url('../img/icon-slides.png') no-repeat -83px 0px;
 	left: 233px;
@@ -265,27 +283,31 @@ aside{
 .banner-right:hover{
 	background: url('../img/icon-slides.png') no-repeat -42px -0px;
 }
+/* banner点 */
 .dian{
-	width: 110px;
+	width: 80px;
 	height: 8px;
 	position: absolute;
 	left: 1101px;
 	bottom: 25px;
 }
-.dian a:hover{
-	background: #a10000;
+.dian li:hover{
+	background: #f1f1f1;
 }
-.dian a{
+.dian li{
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background: #dddddd;
+	background: #938C83;
 	float: left;
 	margin-right: 10px;
+	border: 2px solid #a2a2a2;
+	cursor: pointer;
 }
 .dian .dd{
 	margin-right: 0px;
 }
+/* banner结束 */
 /* 四下 */
 .yemian{
 	width: 1226px;
@@ -303,16 +325,11 @@ aside{
 	margin-right: 0px;
 	padding:3px;
 	font-size: 12px;
-	/* position: relative; */
-
 }
 .xiaomi-left-table{
 	width: 228px;
 	height: 164px;
 	background: red;
-	
-	/* position: absolute;
- */
 }
 .xiaomi-left-table li{
 	width: 70px;
@@ -322,8 +339,6 @@ aside{
 	padding-left: 3px;
 	float: left;
 	position: relative;
-	/* position: absolute; */
-
 }
 .left-table::before,.left-table2::before{
 	content: "";
@@ -388,7 +403,7 @@ aside{
     height: 75px;
     list-style-type: none;
     font-size: 12px;
-    text-align: center;
+    text-align: center; 
     line-height: 105px;
 }
 .yemian1 li a{
